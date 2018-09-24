@@ -535,6 +535,11 @@ uint8_t steady_state(EventPtr event, uint16_t arg) {
         push_state(ramp_config_state, 0);
         return MISCHIEF_MANAGED;
     }
+    // 5 clicks: set MAX_1x7135 level;
+    else if (event == EV_5clicks) {
+        set_level(memorized_level = MAX_1x7135);
+        return MISCHIEF_MANAGED;
+    }
     // hold: change brightness (brighter)
     else if (event == EV_click1_hold) {
         // ramp slower in discrete mode
