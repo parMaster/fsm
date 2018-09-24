@@ -34,3 +34,6 @@ $RECYCLE.BIN/
 
 # IDE
 .idea
+.o
+.hex
+.elf
