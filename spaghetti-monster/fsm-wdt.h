@@ -23,7 +23,7 @@
 #define TICKS_PER_SECOND 62
 
 void WDT_on();
-inline void WDT_off();
+extern inline void WDT_off();
 
 #ifdef TICK_DURING_STANDBY
 volatile uint8_t f_wdt = 0;

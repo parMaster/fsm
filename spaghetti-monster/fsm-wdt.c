@@ -34,7 +34,7 @@ void WDT_on()
 }
 
 #ifdef TICK_DURING_STANDBY
-inline void WDT_slow()
+extern inline void WDT_slow()
 {
     // interrupt slower
     //cli();                          // Disable interrupts
@@ -45,7 +45,7 @@ inline void WDT_slow()
 }
 #endif
 
-inline void WDT_off()
+extern inline void WDT_off()
 {
     //cli();                          // Disable interrupts
     wdt_reset();                    // Reset the WDT

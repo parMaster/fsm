@@ -73,7 +73,7 @@ uint8_t last_event(uint8_t offset) {
 }
 */
 
-inline uint8_t last_event_num() {
+extern inline uint8_t last_event_num() {
     uint8_t i;
     for(i=0; current_event[i] && (i<EV_MAX_LEN); i++);
     return i;
@@ -114,7 +114,7 @@ void process_emissions() {
 
 // explicitly interrupt these "nice" delays
 volatile uint8_t nice_delay_interrupt = 0;
-inline void interrupt_nice_delays() { nice_delay_interrupt = 1; }
+extern inline void interrupt_nice_delays() { nice_delay_interrupt = 1; }
 
 // like delay_ms, except it aborts on state change
 // return value:

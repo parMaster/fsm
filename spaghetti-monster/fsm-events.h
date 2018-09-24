@@ -541,7 +541,7 @@ uint8_t compare_event_sequences(uint8_t *a, const uint8_t *b);
 void empty_event_sequence();
 uint8_t push_event(uint8_t ev_type);
 // uint8_t last_event(uint8_t offset);
-inline uint8_t last_event_num();
+extern inline uint8_t last_event_num();
 
 
 #define EMISSION_QUEUE_LEN 16
@@ -559,6 +559,6 @@ void emit_current_event(uint16_t arg);
 uint8_t nice_delay_ms(uint16_t ms);
 //uint8_t nice_delay_4ms(uint8_t ms);
 //uint8_t nice_delay_s();
-inline void interrupt_nice_delays();
+extern inline void interrupt_nice_delays();
 
 #endif

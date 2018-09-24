@@ -39,7 +39,7 @@ uint8_t button_is_pressed() {
     return readings;
 }
 
-inline void PCINT_on() {
+extern inline void PCINT_on() {
     // enable pin change interrupt for pin N
     GIMSK |= (1 << PCIE);
     // only pay attention to the e-switch pin
@@ -48,7 +48,7 @@ inline void PCINT_on() {
     // MCUCR &= 0b11111101;  MCUCR |= 0b00000001;
 }
 
-inline void PCINT_off() {
+extern inline void PCINT_off() {
     // disable all pin-change interrupts
     GIMSK &= ~(1 << PCIE);
 }

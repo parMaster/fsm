@@ -28,7 +28,7 @@
 #define ADMUX_VOLTAGE ADMUX_VCC
 #endif
 
-inline void ADC_on()
+extern inline void ADC_on()
 {
     // read voltage on VCC by default
     ADMUX = ADMUX_VOLTAGE;
@@ -43,7 +43,7 @@ inline void ADC_on()
     ADCSRA = (1 << ADEN) | (1 << ADSC) | ADC_PRSCL;
 }
 
-inline void ADC_off() {
+extern inline void ADC_off() {
     ADCSRA &= ~(1<<ADEN); //ADC off
 }
 

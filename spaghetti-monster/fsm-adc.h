@@ -82,8 +82,8 @@ volatile uint8_t reset_thermal_history = 1;
 #endif
 
 
-inline void ADC_on();
-inline void ADC_off();
+extern inline void ADC_on();
+extern inline void ADC_off();
 
 
 #endif

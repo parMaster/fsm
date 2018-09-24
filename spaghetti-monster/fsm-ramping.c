@@ -75,7 +75,7 @@ void set_level(uint8_t level) {
 }
 
 #ifdef USE_SET_LEVEL_GRADUALLY
-inline void set_level_gradually(uint8_t lvl) {
+extern inline void set_level_gradually(uint8_t lvl) {
     gradual_target = lvl;
 }
 

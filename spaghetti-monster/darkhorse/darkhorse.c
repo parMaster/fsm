@@ -84,9 +84,9 @@ void set_any_mode(uint8_t primary, uint8_t secondary, uint8_t *modes) {
     #endif
 }
 
-inline void set_low_mode() { set_any_mode(L1, L2, low_modes); }
-inline void set_med_mode() { set_any_mode(M1, M2, med_modes); }
-inline void set_hi_mode()  { set_any_mode(H1, H2, hi_modes); }
+extern inline void set_low_mode() { set_any_mode(L1, L2, low_modes); }
+extern inline void set_med_mode() { set_any_mode(M1, M2, med_modes); }
+extern inline void set_hi_mode()  { set_any_mode(H1, H2, hi_modes); }
 
 
 uint8_t off_state(EventPtr event, uint16_t arg) {

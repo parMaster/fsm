@@ -24,8 +24,8 @@
 #define BP_SAMPLES 32
 volatile uint8_t button_last_state;
 uint8_t button_is_pressed();
-inline void PCINT_on();
-inline void PCINT_off();
+extern inline void PCINT_on();
+extern inline void PCINT_off();
 void PCINT_inner(uint8_t pressed);
 
 #endif
