@@ -46,10 +46,10 @@ static volatile uint16_t ticks_since_last_event = 0;
 
 // timeout durations in ticks (each tick 1/62th s)
 #ifndef HOLD_TIMEOUT
-#define HOLD_TIMEOUT 24
+#define HOLD_TIMEOUT 12
 #endif
 #ifndef RELEASE_TIMEOUT
-#define RELEASE_TIMEOUT 24
+#define RELEASE_TIMEOUT 12
 #endif
 
 #define A_ENTER_STATE     1

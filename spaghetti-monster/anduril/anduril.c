@@ -48,6 +48,7 @@
 #define BATTCHECK_VpT
 //#define BATTCHECK_8bars  // FIXME: breaks build
 //#define BATTCHECK_4bars  // FIXME: breaks build
+#define BLINK_TIMING 150 // ms lenght of a blink and delay between blinks. Delay between digits is 2*BLINK_TIMING ms
 
 // enable/disable various strobe modes
 #define USE_BIKE_FLASHER_MODE
@@ -57,7 +58,7 @@
 #define USE_CANDLE_MODE
 
 //Muggle mode for easy UI
-#define USE_MUGGLE_MODE
+//#define USE_MUGGLE_MODE
 
 #define GOODNIGHT_TIME  60  // minutes (approximately)
 #define GOODNIGHT_LEVEL 24  // ~11 lm

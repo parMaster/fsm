@@ -44,16 +44,16 @@ uint8_t blink_digit(uint8_t num) {
     //StatePtr old_state = current_state;
 
     // "zero" digit gets a single short blink
-    uint8_t ontime = 200;
+    uint8_t ontime = BLINK_TIMING;
     if (!num) { ontime = 8; num ++; }
 
     for (; num>0; num--) {
         set_level(BLINK_BRIGHTNESS);
         nice_delay_ms(ontime);
         set_level(0);
-        nice_delay_ms(400);
+        nice_delay_ms(BLINK_TIMING);
     }
-    return nice_delay_ms(600);
+    return nice_delay_ms(BLINK_TIMING*2);
 }
 #endif
 
